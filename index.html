@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Elizabeth & Miguel</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+
+<body id="inicio">
+
+
+<!-- ==================================================
+     INDICADOR DE CARGA INICIAL
+================================================== -->
+
+<div id="indicadorCarga" class="indicador-carga">
+    <div class="indicador-emoji">💌</div>
+    <div class="indicador-texto">Cargando...</div>
+</div>
+
+
+<!-- ==================================================
+     PANTALLA DE CARGA INSTANTÁNEA
+================================================== -->
+
+<div id="pantallaCarga" class="pantalla-carga">
+
+    <div class="carga-fondo"></div>
+
+    <div class="carga-vineta"></div>
+
+    <div class="carga-contenido">
+
+        <div class="carga-anillo">
+            <div class="carga-anillo-interno"></div>
+            <div class="carga-monograma">E&M</div>
+        </div>
+
+        <div class="carga-texto">
+            Abriendo invitación
+        </div>
+
+        <div class="carga-barra">
+            <div class="carga-barra-progreso" id="barraProgreso"></div>
+        </div>
+
+        <div class="carga-porcentaje" id="porcentajeCarga">
+            0%
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     PORTADA / SOBRE ULTRA PREMIUM
+================================================== -->
+
+<div id="portada" class="portada">
+
+    <div class="vineta-portada"></div>
+
+    <div class="destellos-portada">
+        <span class="destello">✨</span>
+        <span class="destello">✨</span>
+        <span class="destello">✨</span>
+        <span class="destello">✨</span>
+        <span class="destello">✨</span>
+        <span class="destello">✨</span>
+    </div>
+
+    <div class="particulas-portada">
+        <span class="particula">✦</span>
+        <span class="particula">✧</span>
+        <span class="particula">✦</span>
+        <span class="particula">✧</span>
+        <span class="particula">✦</span>
+        <span class="particula">✧</span>
+        <span class="particula">✦</span>
+        <span class="particula">✧</span>
+    </div>
+
+    <div class="linea-decorativa-superior">
+        <span class="linea-izquierda"></span>
+        <span class="linea-diamante">✦</span>
+        <span class="linea-derecha"></span>
+    </div>
+
+    <div class="texto-apertura">
+        Toca el sobre para abrir
+    </div>
+
+    <div id="sobre" class="sobre">
+
+        <div class="sobre-resplandor"></div>
+
+        <div class="sobre-destello"></div>
+
+        <div class="sobre-cuerpo">
+            <div class="sobre-textura"></div>
+            <div class="sobre-borde-interno"></div>
+            <div class="sobre-patron"></div>
+            <div class="sobre-brillo-superior"></div>
+        </div>
+
+        <div class="tapa">
+            <div class="tapa-textura"></div>
+            <div class="tapa-borde"></div>
+            <div class="tapa-brillo"></div>
+            <div class="tapa-patron"></div>
+        </div>
+
+        <div class="sello-cera">
+            <img src="img/sello.png"
+                 class="sello-imagen"
+                 alt="Sello E&M">
+            <div class="sello-brillo"></div>
+            <div class="sello-anillo"></div>
+            <div class="sello-resplandor"></div>
+        </div>
+
+        <div class="cinta-decorativa">
+            <span class="cinta-diamante">✦</span>
+        </div>
+
+        <div class="carta">
+            <div class="carta-borde"></div>
+            <div class="carta-textura"></div>
+            <img src="img/Monograma.png"
+                 class="carta-logo"
+                 alt="Elizabeth y Miguel">
+            <div class="carta-texto">
+                <span>Elizabeth</span>
+                <span class="carta-y">&</span>
+                <span>Miguel</span>
+            </div>
+            <div class="carta-firma">14 · Noviembre · 2026</div>
+            <div class="carta-sello-firma">✦</div>
+        </div>
+
+    </div>
+
+    <div class="linea-decorativa-inferior">
+        <span class="linea-izquierda"></span>
+        <span class="linea-diamante">✦</span>
+        <span class="linea-derecha"></span>
+    </div>
+
+    <div class="texto-inferior">
+        Invitación de boda
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     MUSICA
+================================================== -->
+
+<audio id="musica"
+       loop
+       preload="auto">
+
+    <source src="musica/cancion.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+<button id="botonMusica"
+        class="boton-musica"
+        aria-label="Reproducir o pausar música">
+
+    ▶
+
+</button>
+
+
+<!-- ==================================================
+     MODO NOCTURNO
+================================================== -->
+
+<button id="botonNoche"
+        class="boton-noche"
+        aria-label="Cambiar modo nocturno">
+
+    ☾
+
+</button>
+
+
+<!-- ==================================================
+     BOTON INICIO
+================================================== -->
+
+<button id="botonInicio"
+        class="boton-inicio"
+        aria-label="Volver al inicio">
+
+    ↑
+
+</button>
+
+
+<!-- ==================================================
+     MENU CON ICONOS
+================================================== -->
+
+<button id="botonMenu"
+        class="boton-menu"
+        aria-label="Abrir menú">
+
+    ☰
+
+</button>
+
+
+<div id="menu"
+     class="menu">
+
+    <div class="menu-contenido">
+
+        <button id="cerrarMenu"
+                class="cerrar-menu"
+                aria-label="Cerrar menú">
+
+            ×
+
+        </button>
+
+
+        <div class="menu-titulo">
+
+            Elizabeth
+            <span>&</span>
+            Miguel
+
+        </div>
+
+
+        <nav class="menu-navegacion">
+
+            <a href="#seccionInicio"
+               class="enlace-menu">
+
+                <span class="icono-menu">🏠</span>
+                <span class="texto-menu">Inicio</span>
+
+            </a>
+
+
+            <a href="#familia"
+               class="enlace-menu">
+
+                <span class="icono-menu">👨‍👩‍👧</span>
+                <span class="texto-menu">Familia</span>
+
+            </a>
+
+
+            <a href="#itinerario"
+               class="enlace-menu">
+
+                <span class="icono-menu">📅</span>
+                <span class="texto-menu">Nuestro gran día</span>
+
+            </a>
+
+
+            <a href="#iglesia"
+               class="enlace-menu">
+
+                <span class="icono-menu">⛪</span>
+                <span class="texto-menu">Iglesia</span>
+
+            </a>
+
+
+            <a href="#recepcion"
+               class="enlace-menu">
+
+                <span class="icono-menu">🥂</span>
+                <span class="texto-menu">Recepción</span>
+
+            </a>
+
+
+            <a href="#vestimenta"
+               class="enlace-menu">
+
+                <span class="icono-menu">👗</span>
+                <span class="texto-menu">Código de vestimenta</span>
+
+            </a>
+
+
+            <a href="#guardarFechaSeccion"
+               class="enlace-menu">
+
+                <span class="icono-menu">🗓️</span>
+                <span class="texto-menu">Guardar la fecha</span>
+
+            </a>
+
+
+            <a href="#confirmacion"
+               class="enlace-menu">
+
+                <span class="icono-menu">💌</span>
+                <span class="texto-menu">Confirmar asistencia</span>
+
+            </a>
+
+
+            <a href="#fraseSorpresa"
+               class="enlace-menu">
+
+                <span class="icono-menu">✨</span>
+                <span class="texto-menu">Frase sorpresa</span>
+
+            </a>
+
+
+            <a href="#clima"
+               class="enlace-menu">
+
+                <span class="icono-menu">☀️</span>
+                <span class="texto-menu">Clima</span>
+
+            </a>
+
+
+            <a href="#recuerdos"
+               class="enlace-menu">
+
+                <span class="icono-menu">📸</span>
+                <span class="texto-menu">Recuerdos</span>
+
+            </a>
+
+
+            <a href="#mensajes"
+               class="enlace-menu">
+
+                <span class="icono-menu">💕</span>
+                <span class="texto-menu">Libro de mensajes</span>
+
+            </a>
+
+
+            <a href="#cierre"
+               class="enlace-menu">
+
+                <span class="icono-menu">💍</span>
+                <span class="texto-menu">Cierre</span>
+
+            </a>
+
+
+            <a href="#contacto"
+               class="enlace-menu">
+
+                <span class="icono-menu">✦</span>
+                <span class="texto-menu">Invitaciones digitales</span>
+
+            </a>
+
+        </nav>
+
+
+        <button id="menuNoche"
+                class="menu-noche">
+
+            <span class="icono-menu-noche">☾</span>
+            <span>Modo nocturno</span>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     INVITACION
+================================================== -->
+
+<main id="invitacion"
+      class="invitacion">
+
+
+<!-- ==================================================
+     INICIO / MONOGRAMA
+================================================== -->
+
+<section id="seccionInicio"
+         class="seccion sin-fondo animar-seccion">
+
+    <img src="img/Monograma.png"
+         class="monograma animar-imagen"
+         alt="Monograma E&M">
+
+</section>
+
+
+<!-- ==================================================
+     FOTO PRINCIPAL
+================================================== -->
+
+<section class="seccion tarjeta animar-seccion">
+
+    <div class="marco-dorado">
+        <img src="img/FotoNovios.jpg"
+             class="foto animar-imagen"
+             alt="Elizabeth y Miguel">
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     CUENTA REGRESIVA
+================================================== -->
+
+<section id="cuenta"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-cuenta animar-texto">
+        FALTAN
+    </h2>
+
+
+    <div class="contador animar-texto">
+
+        <div class="unidad-tiempo">
+            <span id="dias">00</span>
+            <small>Días</small>
+        </div>
+
+        <div class="unidad-tiempo">
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="unidad-tiempo">
+            <span id="minutos">00</span>
+            <small>Min.</small>
+        </div>
+
+        <div class="unidad-tiempo">
+            <span id="segundos">00</span>
+            <small>Seg.</small>
+        </div>
+
+    </div>
+
+
+    <div id="estadoBoda"
+         class="estado-boda animar-texto">
+
+        Nuestro gran día está por llegar
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     NOMBRES
+================================================== -->
+
+<section class="seccion tarjeta animar-seccion">
+
+    <p class="frase-invitacion animar-texto">
+
+        Tenemos el honor de invitarte
+        a celebrar nuestra boda
+
+    </p>
+
+
+    <div id="nombres"
+         class="nombres">
+    </div>
+
+
+    <div class="fecha animar-texto">
+
+        <p>EL DÍA</p>
+
+        <strong>14</strong>
+
+        <p>NOVIEMBRE</p>
+
+        <p>2026</p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FOTO / FRASE
+================================================== -->
+
+<section class="seccion tarjeta animar-seccion">
+
+    <div class="marco-dorado">
+        <img src="img/FotoNovios2.jpg"
+             class="foto animar-imagen"
+             alt="Elizabeth y Miguel">
+    </div>
+
+
+    <p class="poema animar-texto">
+
+        "Dos almas, dos historias
+        y un mismo destino."
+
+        <br><br>
+
+        Hoy comienza nuestro para siempre.
+
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     FAMILIA
+================================================== -->
+
+<section id="familia"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        Con la alegría de nuestras familias
+
+    </h2>
+
+    <!-- Separador decorativo después del título -->
+    <div class="separador-familia separador-familia-visible">
+        <span class="separador-diamante">✦</span>
+    </div>
+
+    <!-- Padres del novio -->
+    <div class="familia-grupo">
+        
+        <h3 class="subtitulo-seccion animar-texto">
+            Padres del novio
+        </h3>
+
+
+        <div class="familia-escritura"
+             data-texto="Magdalena Carmona|Miguel Martel">
+        </div>
+
+    </div>
+
+
+    <!-- Separador decorativo -->
+    <div class="separador-familia">
+        <span class="separador-diamante">✦</span>
+    </div>
+
+
+    <!-- Padres de la novia -->
+    <div class="familia-grupo">
+        
+        <h3 class="subtitulo-seccion animar-texto">
+            Padres de la novia
+        </h3>
+
+
+        <div class="familia-escritura"
+             data-texto="Isabel Corona Cid|Mario Garcia Martinez †">
+        </div>
+
+    </div>
+
+
+    <!-- Separador decorativo -->
+    <div class="separador-familia">
+        <span class="separador-diamante">✦</span>
+    </div>
+
+
+    <!-- Padrinos -->
+    <div class="familia-grupo">
+        
+        <h3 class="subtitulo-seccion animar-texto">
+            Padrinos
+        </h3>
+
+
+        <div class="familia-escritura"
+             data-texto="Magdalena Carmona|Miguel Martel">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ACOMPAÑANOS
+================================================== -->
+
+<section class="seccion tarjeta animar-seccion">
+
+    <p class="frase-grande animar-texto">
+
+        Acompáñanos a dar el sí
+
+        <br>
+
+        y después a festejar
+
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     ITINERARIO
+================================================== -->
+
+<section id="itinerario"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        NUESTRO GRAN DÍA
+
+    </h2>
+
+
+    <div class="itinerario">
+
+        <div class="evento animar-texto">
+
+            <div class="hora-evento">
+                4:00 PM
+            </div>
+
+            <div class="icono-evento">
+                ⛪
+            </div>
+
+            <div class="nombre-evento">
+                Ceremonia
+            </div>
+
+        </div>
+
+
+        <div class="linea-itinerario"></div>
+
+
+        <div class="evento animar-texto">
+
+            <div class="hora-evento">
+                7:00 PM
+            </div>
+
+            <div class="icono-evento">
+                🥂
+            </div>
+
+            <div class="nombre-evento">
+                Recepción
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     IGLESIA
+================================================== -->
+
+<section id="iglesia"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-lugar animar-texto">
+        IGLESIA
+    </h2>
+
+
+    <img src="img/Iglesia.png"
+         class="logo-lugar animar-imagen"
+         alt="Iglesia">
+
+
+    <p class="fecha-lugar animar-texto">
+        14 · NOVIEMBRE · 2026
+    </p>
+
+
+    <p class="hora-lugar animar-texto">
+        4:00 PM
+    </p>
+
+
+    <h3 class="nombre-lugar animar-texto">
+
+        Parroquia Santo Tomas
+        Apóstol de Chiconautla
+
+    </h3>
+
+
+    <div class="marco-dorado">
+        <img src="img/Iglesia.jpg"
+             class="foto animar-imagen"
+             alt="Parroquia Santo Tomas Apóstol de Chiconautla">
+    </div>
+
+
+    <p class="direccion animar-texto">
+
+        Progreso Manzana 016,
+        Santo Tomas Chiconautla
+
+    </p>
+
+
+    <a href="https://maps.app.goo.gl/fJZn5xmWthUKQSaW8"
+       target="_blank"
+       rel="noopener"
+       class="boton animar-boton">
+
+        📍 Cómo llegar
+
+    </a>
+
+</section>
+
+
+<!-- ==================================================
+     RECEPCION
+================================================== -->
+
+<section id="recepcion"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-lugar animar-texto">
+        RECEPCIÓN
+    </h2>
+
+
+    <img src="img/Recepcion.png"
+         class="logo-lugar animar-imagen"
+         alt="Recepción">
+
+
+    <p class="fecha-lugar animar-texto">
+        14 · NOVIEMBRE · 2026
+    </p>
+
+
+    <p class="hora-lugar animar-texto">
+        7:00 PM
+    </p>
+
+
+    <h3 class="nombre-lugar animar-texto">
+        Salón de evento
+    </h3>
+
+
+    <div class="marco-dorado">
+        <img src="img/Salon.jpg"
+             class="foto animar-imagen"
+             alt="Salón de evento">
+    </div>
+
+
+    <p class="direccion animar-texto">
+
+        Miguel Hidalgo Manzana 007,
+        Santo Tomas Chiconautla,
+        55066 Ecatepec de Morelos, Méx.
+
+    </p>
+
+
+    <a href="https://maps.app.goo.gl/Stck4Fa9NsJjvzJR9"
+       target="_blank"
+       rel="noopener"
+       class="boton animar-boton">
+
+        📍 Cómo llegar
+
+    </a>
+
+</section>
+
+
+<!-- ==================================================
+     VESTIMENTA
+================================================== -->
+
+<section id="vestimenta"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        CÓDIGO DE VESTIMENTA
+
+    </h2>
+
+
+    <p class="vestimenta-personas animar-texto">
+
+        <strong>Hombres:</strong>
+
+        <br>
+
+        Guapos
+
+        <br><br>
+
+        <strong>Mujeres:</strong>
+
+        <br>
+
+        Hermosas
+
+    </p>
+
+
+    <div class="marco-dorado">
+        <img src="img/Vestimenta.jpg"
+             class="foto animar-imagen"
+             alt="Código de vestimenta">
+    </div>
+
+
+    <p class="colores-no animar-texto">
+
+        <strong>
+            Colores reservados
+        </strong>
+
+    </p>
+
+
+    <div class="colores-reservados animar-texto">
+
+        <div>
+            <span class="color rojo"></span>
+            Rojo
+        </div>
+
+        <div>
+            <span class="color blanco"></span>
+            Blanco
+        </div>
+
+        <div>
+            <span class="color negro"></span>
+            Negro
+        </div>
+
+        <div>
+            <span class="color verde-cemento"></span>
+            Verde cemento
+        </div>
+
+    </div>
+
+
+    <p class="nota-vestimenta animar-texto">
+
+        Evita utilizar estos colores.
+
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     GUARDAR FECHA
+================================================== -->
+
+<section id="guardarFechaSeccion"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        GUARDA LA FECHA
+
+    </h2>
+
+
+    <p class="mensaje-seccion animar-texto">
+
+        No queremos que te pierdas
+        este momento tan especial.
+
+    </p>
+
+
+    <button id="guardarFecha"
+            class="boton boton-calendario animar-boton">
+
+        📅 Guardar fecha
+
+    </button>
+
+</section>
+
+
+<!-- ==================================================
+     CONFIRMACION - FORMULARIO DE GOOGLE
+================================================== -->
+
+<section id="confirmacion"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        CONFIRMA TU ASISTENCIA
+
+    </h2>
+
+
+    <p class="mensaje-seccion animar-texto">
+
+        Nos encantará compartir este
+        momento tan especial contigo.
+
+        <br><br>
+
+        Por favor confirma tu asistencia
+        a través del siguiente formulario.
+
+    </p>
+
+
+    <div class="formulario-confirmacion animar-texto">
+
+        <a href="https://forms.gle/SNaW8fcxhBrnvpQc6"
+           target="_blank"
+           rel="noopener"
+           class="boton-whatsapp boton-formulario">
+
+            📝 Confirmar asistencia
+
+        </a>
+
+
+        <p class="texto-invitados">
+
+            Se abrirá un formulario de Google
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FRASE SORPRESA
+================================================== -->
+
+<section id="fraseSorpresa"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        UNA FRASE PARA USTEDES
+
+    </h2>
+
+
+    <p class="mensaje-seccion animar-texto">
+
+        Toca el botón para descubrir
+        una pequeña sorpresa.
+
+    </p>
+
+
+    <button id="botonSorpresa"
+            class="boton animar-boton">
+
+        ✨ Descubrir
+
+    </button>
+
+
+    <p id="textoSorpresa"
+       class="texto-sorpresa">
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     CLIMA
+================================================== -->
+
+<section id="clima"
+         class="seccion tarjeta animar-seccion">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        CLIMA
+
+    </h2>
+
+
+    <p class="mensaje-seccion animar-texto">
+
+        Temperatura actual y pronóstico
+        para nuestro gran día.
+
+    </p>
+
+
+    <div id="climaContenido"
+         class="clima-contenido animar-texto">
+
+        <div class="clima-icono">
+            🌤️
+        </div>
+
+        <p>
+            Consultando clima...
+        </p>
+
+    </div>
+
+
+    <p id="recomendacionClima"
+       class="recomendacion-clima">
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     RECUERDOS - UPLOADER
+================================================== -->
+
+<section id="recuerdos"
+         class="seccion tarjeta animar-seccion seccion-post-boda">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        RECUERDOS
+
+    </h2>
+
+
+    <div id="estadoRecuerdos"
+         class="estado-recuerdos animar-texto">
+
+        <strong>
+            Comparte tus recuerdos con nosotros
+        </strong>
+
+        <p>
+            Sube las fotografías y videos
+            que hayas tomado durante la celebración.
+        </p>
+
+    </div>
+
+
+    <div id="subirRecuerdos"
+         class="subir-recuerdos activo">
+
+        <h3>
+            Ahora queremos ver la boda
+            desde tus ojos
+        </h3>
+
+
+        <p>
+            Comparte las fotografías y videos
+            que hayas tomado durante la celebración.
+        </p>
+
+
+        <div class="instrucciones-subida">
+
+            <strong>
+                ¿Cómo compartir tus recuerdos?
+            </strong>
+
+            <ol>
+
+                <li>
+                    Toca el botón para abrir el uploader.
+                </li>
+
+                <li>
+                    Selecciona tus fotos y videos.
+                </li>
+
+                <li>
+                    Sube tus archivos.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <a href="https://driveuploader.com/upload/zRKkodq9Cu/"
+           target="_blank"
+           rel="noopener"
+           class="boton recuerdos-boton boton-formulario-upload">
+
+            📤 Subir fotos y videos
+
+        </a>
+
+
+        <p class="texto-invitados">
+
+            Se abrirá una página para subir archivos
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     LIBRO DE MENSAJES - FORMULARIO DE GOOGLE
+================================================== -->
+
+<section id="mensajes"
+         class="seccion tarjeta animar-seccion seccion-post-boda">
+
+    <h2 class="titulo-seccion animar-texto">
+
+        LIBRO DE MENSAJES
+
+    </h2>
+
+
+    <p class="mensaje-seccion animar-texto">
+
+        Déjanos unas palabras para recordar
+        este día para siempre.
+
+    </p>
+
+
+    <div class="formulario-confirmacion animar-texto">
+
+        <a href="https://forms.gle/JUic859VobR3FCD79"
+           target="_blank"
+           rel="noopener"
+           class="boton boton-formulario-mensaje">
+
+            💌 Dejar mi mensaje
+
+        </a>
+
+
+        <p class="texto-invitados">
+
+            Se abrirá un formulario de Google
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     CIERRE
+================================================== -->
+
+<section id="cierre"
+         class="seccion tarjeta cierre animar-seccion">
+
+    <h2 class="titulo-cierre animar-texto">
+
+        <span id="tituloFinal">
+            ¡TE ESPERAMOS!
+        </span>
+
+    </h2>
+
+
+    <p id="mensajeFinal"
+       class="mensaje-cierre animar-texto">
+
+        El mejor regalo será contar
+        con tu presencia en este día
+        tan especial.
+
+        <br><br>
+
+        Gracias por formar parte
+        de nuestra historia.
+
+    </p>
+
+
+    <div class="firma-cierre">
+
+        <span class="nombre-final nombre-elizabeth">
+            Elizabeth
+        </span>
+
+
+        <span class="ampersand-final">
+            &
+        </span>
+
+
+        <span class="nombre-final nombre-miguel">
+            Miguel
+        </span>
+
+    </div>
+
+
+    <p class="fecha-cierre animar-texto">
+
+        14 · Noviembre · 2026
+
+    </p>
+
+
+    <img src="img/Monograma.png"
+         class="monograma-final animar-imagen"
+         alt="Monograma E&M">
+
+</section>
+
+
+<!-- ==================================================
+     CONTACTO COMERCIAL
+     SIEMPRE AL FINAL
+================================================== -->
+
+<section id="contacto"
+         class="seccion contacto-comercial animar-seccion">
+
+    <div class="contacto-interior">
+
+        <div class="separador-decorativo">
+            ✦
+        </div>
+
+
+        <h2 class="titulo-comercial animar-texto">
+
+            ¿Te gustaría una invitación
+            como esta?
+
+        </h2>
+
+
+        <a href="https://wa.me/525581300404?text=Hola,%20me%20interesa%20una%20invitación%20digital"
+           target="_blank"
+           rel="noopener"
+           class="boton-contacto animar-boton">
+
+            ✨ Contáctanos
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     VISOR DE IMAGEN
+================================================== -->
+
+<div id="visorImagen"
+     class="visor-imagen">
+
+    <img id="imagenVisor"
+         src=""
+         alt="Imagen ampliada">
+
+</div>
+
+
+<!-- ==================================================
+     CONFETI
+================================================== -->
+
+<div id="confeti"
+     class="confeti-contenedor">
+</div>
+
+
+</main>
+
+
+<script src="config.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+
+</html>

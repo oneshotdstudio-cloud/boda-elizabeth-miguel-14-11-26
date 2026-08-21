@@ -1,0 +1,67 @@
+==================================================
+   📋 PLANTILLA DE INVITACIÓN DIGITAL
+   Guía de uso rápido
+==================================================
+
+📁 ARCHIVOS:
+-----------
+config.js    → ⚙️ CONFIGURACIÓN (EDITAR ESTE)
+index.html   → Estructura (NO TOCAR)
+style.css    → Estilos (NO TOCAR)
+script.js    → Funcionalidad (NO TOCAR)
+
+📝 CÓMO EDITAR:
+---------------
+1. Abre "config.js" con Bloc de Notas o cualquier editor
+2. Busca la sección que quieras cambiar
+3. Modifica el texto entre comillas ("texto")
+4. Guarda el archivo (Ctrl+S)
+5. Actualiza la página en tu navegador (F5)
+
+✅ EJEMPLOS:
+-----------
+Cambiar nombre de la novia:
+  nombreNovia: "Elizabeth"  →  nombreNovia: "María"
+
+Cambiar fecha:
+  fechaBoda: "2026-11-14T16:00:00"  →  fechaBoda: "2027-05-20T15:00:00"
+
+Ocultar una sección:
+  mostrarFamilia: true  →  mostrarFamilia: false
+
+Cambiar enlace de confirmación:
+  linkFormularioConfirmacion: "https://forms.gle/TU_ENLACE"
+
+🖼️ CAMBIAR IMÁGENES:
+-------------------
+Reemplaza los archivos en la carpeta "img/" 
+manteniendo los MISMOS NOMBRES:
+  - Fondo.jpg → Fondo de la invitación
+  - Monograma.png → Monograma de los novios
+  - sello.png → Sello del sobre
+  - FotoNovios.jpg → Foto principal
+  - FotoNovios2.jpg → Segunda foto
+  - Iglesia.png → Logo de iglesia
+  - Iglesia.jpg → Foto de iglesia
+  - Recepcion.png → Logo de recepción
+  - Salon.jpg → Foto del salón
+  - Vestimenta.jpg → Foto de vestimenta
+
+🎵 CAMBIAR MÚSICA:
+-----------------
+Reemplaza "musica/cancion.mp3" con tu canción
+manteniendo el mismo nombre.
+
+🔗 ENLACES IMPORTANTES:
+---------------------
+- Confirmación: forms.gle/SNaW8fcxhBrnvpQc6
+- Mensajes: forms.gle/JUic859VobR3FCD79
+- Subir archivos: driveuploader.com/upload/zRKkodq9Cu/
+
+📱 PROBAR EN MÓVIL:
+-----------------
+1. Sube los archivos a un hosting (Netlify, GitHub Pages)
+2. Abre el enlace en tu celular
+3. Todo se adapta automáticamente
+
+==================================================
